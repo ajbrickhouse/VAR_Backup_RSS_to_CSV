@@ -4,8 +4,8 @@ import xml.etree.ElementTree as et
 import pandas as pd 
 
 
-# The filename with no extention
-file_name = r'controller_1__XY_RI90_01_CT90_03_042122'
+# The filename with NO EXTENSION
+file_name = r'examples\controller_1_ALL_DATA_041622'
 
 # Convert Sysmac hex values to real number
 def hex_to_real(hex_val):
