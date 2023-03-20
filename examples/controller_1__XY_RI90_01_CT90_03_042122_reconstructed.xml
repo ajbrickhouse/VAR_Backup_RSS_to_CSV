@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Content>
+  <Header>
+    <Version>1.1</Version>
+    <EnableOffset>True</EnableOffset>
+    <Project ID="e544661d-10a1-4819-8f05-2e0ca56856ca" Name="AJB_04082022_D11938_SC1_EOD_1" Tracking="2533315d-5ddc-4796-a317-05719180cd0b">
+      <DeviceType>NJ501</DeviceType>
+      <DeviceModelFull>NJ501-1300</DeviceModelFull>
+      <UnitVersion>1.40</UnitVersion>
+    </Project>
+  </Header>
+  <Body>
+    <RetainVariable>
+      <Item Name="VAR://BLD01_RI90_01_XY.x[0]" DataType="REAL">
+        <Data>9D70AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.x[1]" DataType="REAL">
+        <Data>A07CAA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.x[2]" DataType="REAL">
+        <Data>71A0AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.x[3]" DataType="REAL">
+        <Data>44AAAA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.x[4]" DataType="REAL">
+        <Data>26B3AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.y[0]" DataType="REAL">
+        <Data>C1CF4140</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.y[1]" DataType="REAL">
+        <Data>74316A40</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.y[2]" DataType="REAL">
+        <Data>7E5AA640</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.y[3]" DataType="REAL">
+        <Data>4D45B840</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI90_01_XY.y[4]" DataType="REAL">
+        <Data>F7FAC640</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.x[0]" DataType="REAL">
+        <Data>9D70AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.x[1]" DataType="REAL">
+        <Data>A07CAA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.x[2]" DataType="REAL">
+        <Data>71A0AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.x[3]" DataType="REAL">
+        <Data>44AAAA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.x[4]" DataType="REAL">
+        <Data>26B3AA3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.y[0]" DataType="REAL">
+        <Data>C1CF4140</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.y[1]" DataType="REAL">
+        <Data>74316A40</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.y[2]" DataType="REAL">
+        <Data>7E5AA640</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.y[3]" DataType="REAL">
+        <Data>4D45B840</Data>
+      </Item>
+      <Item Name="VAR://BLD01_RI91_01_XY.y[4]" DataType="REAL">
+        <Data>F7FAC640</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.x[0]" DataType="REAL">
+        <Data>4A2E0741</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.x[1]" DataType="REAL">
+        <Data>58631441</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.x[2]" DataType="REAL">
+        <Data>78762141</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.x[3]" DataType="REAL">
+        <Data>CF882F41</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.x[4]" DataType="REAL">
+        <Data>77323D41</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.y[0]" DataType="REAL">
+        <Data>71842C3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.y[1]" DataType="REAL">
+        <Data>D126543F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.y[2]" DataType="REAL">
+        <Data>EE4A803F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.y[3]" DataType="REAL">
+        <Data>D6999E3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT90_03_XY.y[4]" DataType="REAL">
+        <Data>CF1DC83F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.x[0]" DataType="REAL">
+        <Data>4A2E0741</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.x[1]" DataType="REAL">
+        <Data>58631441</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.x[2]" DataType="REAL">
+        <Data>78762141</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.x[3]" DataType="REAL">
+        <Data>CF882F41</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.x[4]" DataType="REAL">
+        <Data>77323D41</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.y[0]" DataType="REAL">
+        <Data>71842C3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.y[1]" DataType="REAL">
+        <Data>D126543F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.y[2]" DataType="REAL">
+        <Data>EE4A803F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.y[3]" DataType="REAL">
+        <Data>D6999E3F</Data>
+      </Item>
+      <Item Name="VAR://BLD01_CT91_03_XY.y[4]" DataType="REAL">
+        <Data>CF1DC83F</Data>
+      </Item>
+    </RetainVariable>
+  </Body>
+</Content>
