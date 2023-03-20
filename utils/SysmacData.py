@@ -1,6 +1,6 @@
 # Created by Anthony Brinkhuis
 import struct
-import xml.etree.ElementTree as et
+import lxml.etree as et
 import pandas as pd
 
 
@@ -15,6 +15,12 @@ class SysmacData:
         fmt = '<' + FLOAT * (len(binary_data) // struct.calcsize(FLOAT))
         numbers = struct.unpack(fmt, binary_data)
         return numbers[0]
+    
+    @staticmethod
+    def real_to_hex(real_number):
+        binary_data = struct.pack('f', real_number)
+        hex_data = binary_data.hex()
+        return hex_data
 
     def parse_xml(self):
         xml_data = et.parse(f'{self.file_name}.xml')
@@ -57,33 +63,43 @@ class SysmacData:
 
     def csv_to_xml(self):
         df = pd.read_csv(f'{self.file_name}.csv')
-        original_xml = et.parse(f'{self.file_name}.xml')
-        data_root = original_xml.find('Body')
-        ret_vars = data_root.find('RetainVariable')
 
+        # Create the root element
+        root = et.Element("Root")
+
+        # Create the body element
+        body = et.SubElement(root, "Body")
+
+        # Create the RetainVariable element
+        retain_vars = et.SubElement(body, "RetainVariable")
+
+        # Iterate through the dataframe rows and build XML elements
         for index, row in df.iterrows():
-            tag = f"Symbol{row['Tag']}"
-            data_type = row['Type']
-            data_text = row['Data']
+            item = et.SubElement(retain_vars, "Item", Name=f"AT%s" % row["Tag"], Type=row["Type"])
+            data = et.SubElement(item, "Data")
 
-            item = ret_vars.find(f'./Item[@Name="{tag}"]')
-
-            if item is not None:
-                data_element = item.find('Data')
-
-                if ('REAL' in data_type) or ('real' in data_type):
-                    data_element.text = hex(struct.unpack('<I', struct.pack('<f', float(data_text)))[0])[2:]
-                elif ('STRING' in data_type) or ('string' in data_type):
-                    data_element.text = data_text.encode().hex()
+            if "REAL" in row["Type"] or "real" in row["Type"]:
+                data.text = self.real_to_hex(float(row["Data"]))
+            elif "STRING" in row["Type"] or "string" in row["Type"]:
+                data_value = row["Data"]
+                if isinstance(data_value, str):
+                    data.text = bytearray(data_value, 'utf-8').hex()
                 else:
-                    data_element.text = data_text
+                    data.text = ''
+            else:
+                data.text = str(row["Data"])
             print(index)
 
-        original_xml.write(f'{self.file_name}_reconstructed.xml', encoding='utf-8', xml_declaration=True)
+        # Generate the XML string with lxml.etree.tostring and include the XML declaration
+        xml_string = et.tostring(root, encoding='utf-8', pretty_print=True, xml_declaration=True).decode('utf-8')
+
+        # Save the XML string to a file
+        with open(f'{self.file_name}_new_file.xml', 'w', encoding='utf-8') as xml_file:
+            xml_file.write(xml_string)
 
 
 if __name__ == '__main__':
-    file_name = r'examples\controller_1_ALL_DATA_041622'
+    file_name = r'examples\controller_1__XY_RI90_01_CT90_03_042122'
     sysmac_data = SysmacData(file_name)
     sysmac_data.save_to_csv()
     sysmac_data.csv_to_xml()
